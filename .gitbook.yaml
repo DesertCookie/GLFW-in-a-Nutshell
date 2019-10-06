@@ -1,4 +1,4 @@
-root ./gitbook/
+root: ./gitbook/
 
 structure:
   readme: about-glfw.md
