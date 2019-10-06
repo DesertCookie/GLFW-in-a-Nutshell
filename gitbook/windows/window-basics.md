@@ -1,5 +1,5 @@
 ---
-description: What you need to know about GLFW windows
+description: Basics you should to know about GLFW windows
 ---
 
 # Window Basics
@@ -20,7 +20,7 @@ TODO
 
 TODO
 
-## User Pointer
+## User Pointers
 
 TODO
 

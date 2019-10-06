@@ -1,5 +1,5 @@
 ---
-description: What you need to know about GLFW contexts
+description: Basics you need to know about GLFW contexts
 ---
 
 # Context Basics
@@ -9,6 +9,8 @@ description: What you need to know about GLFW contexts
 TODO
 
 ## Creation Hints
+
+TODOO
 
 ## Context Sharing
 

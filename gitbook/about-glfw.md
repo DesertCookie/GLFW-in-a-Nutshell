@@ -22,6 +22,6 @@ To dive deeper into the history of GLFW, I recommend the [news archive](https://
 
 * [GLFW Homepage](https://www.glfw.org)
 * [GLFW on GitHub](https://github.com/glfw)
-* [List of community bindings and frameworks](https://www.glfw.org/community.html)
 * [HTML documentation](https://www.glfw.org/docs/latest/)
+* [List of community bindings and frameworks](https://www.glfw.org/community.html)
 

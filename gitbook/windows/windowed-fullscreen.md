@@ -1,2 +1,0 @@
-# \(Windowed\) Fullscreen
-

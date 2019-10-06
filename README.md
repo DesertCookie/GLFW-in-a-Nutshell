@@ -1,29 +1,50 @@
+# GLFW in a Nutshell
+
+...is the combination of a [GitBook](https://desertcookie.gitbook.io/glfw-in-a-nutshell) and [code examples](https://github.com/DesertCookie/GLFW-in-a-Nutshell/tree/master/examples) about game development with GLFW in Java, C, and C++.
+
+GLFW in a Nutshell is an open-source project, and are welcome to [add your favorite programming language](https://github.com/DesertCookie/GLFW-in-a-Nutshell/issues/new?assignees=&labels=Language+Addition&template=language-addition.md&title=) or [help translate the GitBook](https://github.com/DesertCookie/GLFW-in-a-Nutshell/issues/new?assignees=&labels=Translation&template=translation.md&title=Translation+to+LANGUAGE).
+
 ---
-description: Everything you need to know about GLFW
+
+*GLFW in a Nutshell is under construction. Prepare for empty or incomplete pages.  
+We are here in our project timeline:*
+
+[O] Version 1: [Project Setup](https://desertcookie.gitbook.io/glfw-in-a-nutshell/preparation/project-setup), [Library Setup](https://desertcookie.gitbook.io/glfw-in-a-nutshell/preparation/library-setup), [Window Basics](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/window-basics), [Properties](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/properties), [Actions](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/actions), [Context Basics](https://desertcookie.gitbook.io/glfw-in-a-nutshell/contexts/context-basics), [OpenGL \(ES\)](https://desertcookie.gitbook.io/glfw-in-a-nutshell/contexts/opengl)
+[0] Version 2: [Creation Hints](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/creation-hints), [Attributes](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/attributes), [Callbacks](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/callbacks), [Keyboard](https://desertcookie.gitbook.io/glfw-in-a-nutshell/input/keyboard), [Monitor Basics](https://desertcookie.gitbook.io/glfw-in-a-nutshell/monitors/monitor-basics)
+[0] Version 3: [\(Windowed\) Fullscreen](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/windowed-fullscreen), [Mouse](https://desertcookie.gitbook.io/glfw-in-a-nutshell/input/mouse), [Joystick/Gamepad](https://desertcookie.gitbook.io/glfw-in-a-nutshell/input/joystick)
+[0] Version 4: [Icons](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/icons), [Vulkan](https://desertcookie.gitbook.io/glfw-in-a-nutshell/contexts/vulkan), [Other](https://desertcookie.gitbook.io/glfw-in-a-nutshell/input/other), [Video Modes](https://desertcookie.gitbook.io/glfw-in-a-nutshell/monitors/video-modes), [Multiple Monitors](https://desertcookie.gitbook.io/glfw-in-a-nutshell/monitors/multiple-monitors)
+
 ---
 
-# About GLFW
+### The GitBook
 
-## 
+1. [About GLFW](https://desertcookie.gitbook.io/glfw-in-a-nutshell)
+2. Preparation
+   1. [Project Setup](https://desertcookie.gitbook.io/glfw-in-a-nutshell/preparation/project-setup)
+   2. [Library Setup](https://desertcookie.gitbook.io/glfw-in-a-nutshell/preparation/library-setup)
+3. Windows
+   1. [Window Basics](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/window-basics)
+   2. [Properties](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/properties)
+   3. [Actions](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/actions)
+   4. [Creation Hints](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/creation-hints)
+   5. [Attributes](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/attributes)
+   6. [\(Windowed\) Fullscreen](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/windowed-fullscreen)
+   7. [Callbacks](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/callbacks)
+   8. [Icons](https://desertcookie.gitbook.io/glfw-in-a-nutshell/windows/icons)
+4. Contexts
+   1. [Context Basics](https://desertcookie.gitbook.io/glfw-in-a-nutshell/contexts/context-basics)
+   2. [OpenGL \(ES\)](https://desertcookie.gitbook.io/glfw-in-a-nutshell/contexts/opengl)
+   3. [Vulkan](https://desertcookie.gitbook.io/glfw-in-a-nutshell/contexts/vulkan)
+5. Input
+   1. [Keyboard](https://desertcookie.gitbook.io/glfw-in-a-nutshell/input/keyboard)
+   2. [Mouse](https://desertcookie.gitbook.io/glfw-in-a-nutshell/input/mouse)
+   3. [Joystick/Gamepad](https://desertcookie.gitbook.io/glfw-in-a-nutshell/input/joystick)
+   4. [Other](https://desertcookie.gitbook.io/glfw-in-a-nutshell/input/other)
+6. Monitors
+   1. [Monitor Basics](https://desertcookie.gitbook.io/glfw-in-a-nutshell/monitors/monitor-basics)
+   2. [Video Modes](https://desertcookie.gitbook.io/glfw-in-a-nutshell/monitors/video-modes)
+   3. [Multiple Monitors](https://desertcookie.gitbook.io/glfw-in-a-nutshell/monitors/multiple-monitors)
 
-## What is GLFW?
+### Examples
 
-GLFW is short for Graphics Library Framework. It provides a simple API for creating and handling windows and contexts, and receiving input. The project is open source and supports all major operating systems. It has built-in support for industry-standard rendering APIs like OpenGL and Vulkan, and can be used in virtually any programming language, thanks to more than thirty open-source bindings.
-
-More information about GLFW can be found on \[glfw.org\]\([https:/glfw.org/](https://www.glfw.org/)\). The website houses an active \[forum\]\([http://discourse.glfw.org/](http://discourse.glfw.org/)\), as well as superb \[documentation\]\([https://www.glfw.org/documentation.html](https://www.glfw.org/documentation.html)\). Examples and source code of GLFW can be found in the official \[GitHub repository\]\([https://github.com/glfw/glfw](https://github.com/glfw/glfw)\).
-
-## History of GLFW
-
-In GLFW's \[version history\]\([https://glfw.org/changelog.html](https://www.glfw.org/changelog.html)\) releases date back to February 2002, with the release of version 2.0. For more than ten years, GLFW 2 was the most up-to-date version and saw small improvements and additions from version to version. During this time, in 2006, ownership of the project passed from Marcus Geelnard to Camilla Löwy. At this point, a total of 312 commits had been made to the GitHub repository. Version 2.7.9, released in June of 2013, should be the last release of GLFW 2, which is now referred to as GLFW Legacy and is still available on \[GitHub\]\([https://github.com/glfw/glfw-legacy](https://github.com/glfw/glfw-legacy)\).
-
-GLFW 3 had been worked on alongside GLFW 2 for nearly two years in the background and was subsequently released the same month, as version 2.7.9 was. It introduced support for multiple windows and monitors, as well as added better error handling. GLFW 3 releases were much more frequent and feature-rich, compared to GLFW 2 releases, thanks to a growing community that happily contributed on GitHub. With version 3.2 in 2016, initial support for Vulkan was added, which was refined in 2019 with version 3.3, which brought support for Vulkan on macOS via MoltenVK. As of October 2019, nearly 4,000 commits have been made to the \[offical repository\]\([https://github.com/glfw/glfw](https://github.com/glfw/glfw)\), by more than twenty regular contributors.
-
-To dive deeper into the history of GLFW, I recommend the \[news archive\]\([https://glfw.org/news.html](https://www.glfw.org/news.html)\), available on the official website.
-
-## Link Collection
-
-* GLFW Homepage: \[glfw.org\]\([https://glfw.org/community.html](https://www.glfw.org/community.html)\)
-* GLFW on GitHub: \[github.com/glfw\]\([https://github.com/glfw](https://github.com/glfw)\)
-* List of community bindings and frameworks: \[glfw.org/community\]\([https://www.glfw.org/community.html](https://www.glfw.org/community.html)\)
-* HTML documentation: \[glfw.org/docs\]\([https://glfw.org/docs/latest/](https://www.glfw.org/docs/latest/)\)
-
+*Links coming soon...*

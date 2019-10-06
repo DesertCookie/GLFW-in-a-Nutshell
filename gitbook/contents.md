@@ -1,7 +1,6 @@
 # Table of contents
 
 * [About GLFW](about-glfw.md)
-* [\[Ignore\] Syntax Test](tab-test.md)
 
 ## Preparation
 
@@ -15,7 +14,7 @@
 * [Actions](windows/actions.md)
 * [Creation Hints](windows/creation-hints.md)
 * [Attributes](windows/attributes.md)
-* [\(Windowed\) Fullscreen](windows/windowed-fullscreen.md)
+* [\(Windowed\) Fullscreen](windows/fullscreen.md)
 * [Callbacks](windows/callbacks.md)
 * [Icons](windows/icons.md)
 
@@ -29,7 +28,7 @@
 
 * [Keyboard](input/keyboard.md)
 * [Mouse](input/mouse.md)
-* [Joystick/Gamepad](input/joystick-gamepad.md)
+* [Joystick/Gamepad](input/joystick.md)
 * [Other](input/other.md)
 
 ## Monitors
@@ -42,4 +41,5 @@
 
 * [Credits](appendix/credits.md)
 * [Licensing](appendix/licensing.md)
+* [Glossary](appendix/glossary.md)
 
