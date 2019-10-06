@@ -1,0 +1,5 @@
+root ./gitbook/
+
+structure:
+  readme: about-glfw.md
+  summary: contents.md

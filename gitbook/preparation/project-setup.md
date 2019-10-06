@@ -265,11 +265,11 @@ This assumes, you have already created an IntelliJ IDEA or Eclipse project and a
 {% tabs first="IntelliJ IDEA, second="Eclipse" %}
 {% content "first" %}
 {:start="4}
-4. Open `Project Structure` by pressing ![alt text](https://i.imgur.com/RgPu05S.png "Project Structure") in the top right corner, or `CTRL+ALT+SHIFT+S` / `⌘Cmd+;`.
-5. Select the tab `Libraries` on the left, click on ![alt text](https://i.imgur.com/hgPOXYM.png "Add Library") and select `Java`:
-![alt text](https://i.imgur.com/TzC1JTy.png "Project Structure > Libraries")
+4. Open `Project Structure` by pressing ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_icon_project_structure.png "Project Structure") in the top right corner, or `CTRL+ALT+SHIFT+S` / `⌘Cmd+;`.
+5. Select the tab `Libraries` on the left, click on ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_icon_add_library.png "Add Library") and select `Java`:
+![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_project_structure.png "Project Structure > Libraries")
 6. Specify your libraries location (selecting the top-level folder is enough), and select the modules to add your libraries to:
-![alt text](https://i.imgur.com/5La4UJp.png "Select Library Files")![alt text](https://i.imgur.com/mPRwPpm.png "Choose Modules")
+![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_select_library_files.png "Select Library Files")![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_chose_modules.png "Choose Modules")
    Note: *When selecting a folder as library file, IntelliJ classifies jars containing JavaDoc and natives under `Classes`. This is purely visual - JavaDocs and natives are correctly added.*
 7. Save your Project Settings by clicking on `Okay.`
 
