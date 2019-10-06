@@ -8,12 +8,12 @@ description: Getting a project set up to start development
 
 Wrappers available for Java:
 
-| Wrapper | Author  |   GitHub   |   Source   | Documentation |
-| ------- | ------- | ---------- | ---------- | ------------- |
-| jGLFW  | badlogic | [github.com]((https://github.com/badlogic/jglfw)) | [gitbub.com](https://github.com/badlogic/jglfw/tree/master/jglfw/src/com/badlogic/jglfw) | -   |
+| Wrapper | Author | GitHub | Source | Documentation |
+| :--- | :--- | :--- | :--- | :--- |
+| jGLFW | badlogic | \[github.com\]\(\([https://github.com/badlogic/jglfw](https://github.com/badlogic/jglfw)\)\) | [gitbub.com](https://github.com/badlogic/jglfw/tree/master/jglfw/src/com/badlogic/jglfw) | - |
 | LWJGL-GLFW | LWJGL | [github.com](https://github.com/LWJGL/lwjgl3) | [github.com](https://github.com/LWJGL/lwjgl3/tree/master/modules/lwjgl/glfw) | [lwjgl.org](https://javadoc.lwjgl.org/org/lwjgl/glfw/package-summary.html) |
 
-*In this guide, LWJGL-GLFW will be used. There are no plans to add a how-to for jGLFW. LWJGL-GLFW requires the LWJGL core, and since [STB](https://github.com/nothings/stb) will be used in this guide, we will also add LWJGL-STB.*
+_In this guide, LWJGL-GLFW will be used. There are no plans to add a how-to for jGLFW. LWJGL-GLFW requires the LWJGL core, and since_ [_STB_](https://github.com/nothings/stb) _will be used in this guide, we will also add LWJGL-STB._
 
 ### Maven
 
@@ -21,9 +21,7 @@ This assumes, you have already created a Maven project and have some familiarity
 
 Depending on your operating system, add the following to your `pom.xml`:
 
-{% tabs first="Windows", second="Linux", third="macOS" %}
-{% content "first" %}
-```xml
+```markup
     <properties>
       <lwjgl.version>3.2.3</lwjgl.version>
       <lwjgl.natives>natives-windows-x86</lwjgl.natives>
@@ -72,8 +70,7 @@ Depending on your operating system, add the following to your `pom.xml`:
    </dependencies>
 ```
 
-{% content "second" %}
-```xml
+```markup
     <properties>
       <lwjgl.version>3.2.3</lwjgl.version>
       <lwjgl.natives>natives-linux</lwjgl.natives>
@@ -122,8 +119,7 @@ Depending on your operating system, add the following to your `pom.xml`:
    </dependencies>
 ```
 
-{% content "third" %}
-```xml
+```markup
     <properties>
       <lwjgl.version>3.2.3</lwjgl.version>
       <lwjgl.natives>natives-macos</lwjgl.natives>
@@ -172,8 +168,6 @@ Depending on your operating system, add the following to your `pom.xml`:
    </dependencies>
 ```
 
-{% endtabs %}
-
 If you require a more complex dependency setup, for example supporting multiple operating systems, head to [lwjgl.org](https://lwjgl.org/customize) and easily build a `pom.xml` specific to your needs.
 
 ### Gradle
@@ -182,19 +176,17 @@ This assumes, you have already created a Gradle project and have some familiarit
 
 Depending on your operating system, add the following to your `build.gradle`:
 
-{% tabs first="Windows", second="Linux", third="macOS" %}
-{% content "first" %}
 ```groovy
     project.ext.lwjglVersion = "3.2.3"
     project.ext.lwjglNatives = "natives-windows-x86"
-    
+
     repositories {
        mavenCentral()
     }
-    
+
     dependencies {
        implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
-    
+
        implementation "org.lwjgl:lwjgl"
        implementation "org.lwjgl:lwjgl-glfw"
        implementation "org.lwjgl:lwjgl-stb"
@@ -204,18 +196,17 @@ Depending on your operating system, add the following to your `build.gradle`:
     }
 ```
 
-{% content "second" %}
 ```groovy
     project.ext.lwjglVersion = "3.2.3"
     project.ext.lwjglNatives = "natives-linux"
-    
+
     repositories {
        mavenCentral()
     }
-    
+
     dependencies {
        implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
-    
+
        implementation "org.lwjgl:lwjgl"
        implementation "org.lwjgl:lwjgl-glfw"
        implementation "org.lwjgl:lwjgl-stb"
@@ -225,18 +216,17 @@ Depending on your operating system, add the following to your `build.gradle`:
     }
 ```
 
-{% content "third" %}
 ```groovy
     project.ext.lwjglVersion = "3.2.3"
     project.ext.lwjglNatives = "natives-macos"
-    
+
     repositories {
        mavenCentral()
     }
-    
+
     dependencies {
        implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
-    
+
        implementation "org.lwjgl:lwjgl"
        implementation "org.lwjgl:lwjgl-glfw"
        implementation "org.lwjgl:lwjgl-stb"
@@ -245,8 +235,6 @@ Depending on your operating system, add the following to your `build.gradle`:
        runtimeOnly "org.lwjgl:lwjgl-stb::$lwjglNatives"
     }
 ```
-
-{% endtabs %}
 
 If you require a more complex dependency setup, for example supporting multiple operating systems, head to [lwjgl.org](https://lwjgl.org/customize) and easily build a `gradle.properties` specific to your needs.
 
@@ -256,25 +244,14 @@ This assumes, you have already created an IntelliJ IDEA or Eclipse project and a
 
 1. Open [lwjgl.org](https://lwjgl.org/customize) and select `Release`.
 2. Adjust the following settings:  
-   &nbsp;&nbsp;Options: `Include source`, `Include JavaDoc`  
-   &nbsp;&nbsp;Natives: *choose depending on your needs*  
-   &nbsp;&nbsp;Presets: `None` (*to deselect everything*)  
-   &nbsp;&nbsp;Contents: `LWJGL core`, `GLFW`, `stb`
-3. Hit `DOWNLOAD ZIP` and extract the downloaded archive into a folder in your project root (e.g. `lib`).
 
-{% tabs first="IntelliJ IDEA, second="Eclipse" %}
-{% content "first" %}
-{:start="4}
-4. Open `Project Structure` by pressing ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_icon_project_structure.png "Project Structure") in the top right corner, or `CTRL+ALT+SHIFT+S` / `⌘Cmd+;`.
-5. Select the tab `Libraries` on the left, click on ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_icon_add_library.png "Add Library") and select `Java`:
-![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_project_structure.png "Project Structure > Libraries")
-6. Specify your libraries location (selecting the top-level folder is enough), and select the modules to add your libraries to:
-![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_select_library_files.png "Select Library Files")![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/img/intellij_idea_chose_modules.png "Choose Modules")
-   Note: *When selecting a folder as library file, IntelliJ classifies jars containing JavaDoc and natives under `Classes`. This is purely visual - JavaDocs and natives are correctly added.*
-7. Save your Project Settings by clicking on `Okay.`
+     Options: `Include source`, `Include JavaDoc`  
 
-{% content "second" %}
-{:start="4"}
-TODO
+     Natives: _choose depending on your needs_  
 
-{% endtabs %}
+     Presets: `None` \(_to deselect everything_\)  
+
+     Contents: `LWJGL core`, `GLFW`, `stb`
+
+3. Hit `DOWNLOAD ZIP` and extract the downloaded archive into a folder in your project root \(e.g. `lib`\).
+

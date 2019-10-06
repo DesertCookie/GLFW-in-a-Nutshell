@@ -1,5 +1,5 @@
 ---
-description: What you need to know about GLFW, before getting started
+description: 'What you need to know about GLFW, before getting started'
 ---
 
 # About GLFW
@@ -24,3 +24,4 @@ To dive deeper into the history of GLFW, I recommend the [news archive](https://
 * [GLFW on GitHub](https://github.com/glfw)
 * [List of community bindings and frameworks](https://www.glfw.org/community.html)
 * [HTML documentation](https://www.glfw.org/docs/latest/)
+

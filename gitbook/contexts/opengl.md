@@ -2,7 +2,7 @@
 description: Creating GLFW contexts for OpenGL and OpenGL ES
 ---
 
-# OpenGL (ES) Contexts
+# OpenGL \(ES\)
 
 ## Context Creation
 
@@ -11,3 +11,4 @@ TODO
 ## Extensions
 
 TODO
+

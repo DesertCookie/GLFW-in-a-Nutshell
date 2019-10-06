@@ -2,7 +2,7 @@
 description: Controlling GLFW windows
 ---
 
-# Window Actions
+# Actions
 
 ## Visibility
 
@@ -31,3 +31,4 @@ TODO
 ## Attention Request
 
 TODO
+

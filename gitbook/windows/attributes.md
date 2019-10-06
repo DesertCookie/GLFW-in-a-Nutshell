@@ -2,7 +2,7 @@
 description: Querying and setting GLFW window attributes
 ---
 
-# Window Attributes
+# Attributes
 
 ## Querying Attributes
 
@@ -35,3 +35,4 @@ TODO
 ## X11-specific Attributes
 
 TODO
+

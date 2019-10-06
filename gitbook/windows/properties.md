@@ -2,7 +2,7 @@
 description: Getting and setting GLFW window properties
 ---
 
-# Window Properties
+# Properties
 
 ## Title
 
@@ -27,3 +27,4 @@ TODO
 ## Content Scale
 
 TODO
+

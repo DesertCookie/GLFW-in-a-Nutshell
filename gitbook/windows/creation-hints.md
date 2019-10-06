@@ -2,7 +2,7 @@
 description: Specifying GLFW window behaviors and properties before creation
 ---
 
-# Window Creation Hints
+# Creation Hints
 
 ## Specifying Creation Hints
 
@@ -31,3 +31,4 @@ TODO
 ## X11-specific Hints
 
 TODO
+
