@@ -1,0 +1,280 @@
+---
+description: Getting a project set up to start development
+---
+
+# Project Setup
+
+## Java
+
+Wrappers available for Java:
+
+| Wrapper | Author  |   GitHub   |   Source   | Documentation |
+| ------- | ------- | ---------- | ---------- | ------------- |
+| jGLFW  | badlogic | [github.com]((https://github.com/badlogic/jglfw)) | [gitbub.com](https://github.com/badlogic/jglfw/tree/master/jglfw/src/com/badlogic/jglfw) | -   |
+| LWJGL-GLFW | LWJGL | [github.com](https://github.com/LWJGL/lwjgl3) | [github.com](https://github.com/LWJGL/lwjgl3/tree/master/modules/lwjgl/glfw) | [lwjgl.org](https://javadoc.lwjgl.org/org/lwjgl/glfw/package-summary.html) |
+
+*In this guide, LWJGL-GLFW will be used. There are no plans to add a how-to for jGLFW. LWJGL-GLFW requires the LWJGL core, and since [STB](https://github.com/nothings/stb) will be used in this guide, we will also add LWJGL-STB.*
+
+### Maven
+
+This assumes, you have already created a Maven project and have some familiarity with Maven's `pom.xml` file.
+
+Depending on your operating system, add the following to your `pom.xml`:
+
+{% tabs first="Windows", second="Linux", third="macOS" %}
+{% content "first" %}
+```xml
+    <properties>
+      <lwjgl.version>3.2.3</lwjgl.version>
+      <lwjgl.natives>natives-windows-x86</lwjgl.natives>
+   </properties>
+
+   <dependencyManagement>
+      <dependencies>
+         <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-bom</artifactId>
+            <version>${lwjgl.version}</version>
+            <scope>import</scope>
+            <type>pom</type>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
+
+   <dependencies>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-glfw</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-stb</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-glfw</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-stb</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+   </dependencies>
+```
+
+{% content "second" %}
+```xml
+    <properties>
+      <lwjgl.version>3.2.3</lwjgl.version>
+      <lwjgl.natives>natives-linux</lwjgl.natives>
+   </properties>
+
+   <dependencyManagement>
+      <dependencies>
+         <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-bom</artifactId>
+            <version>${lwjgl.version}</version>
+            <scope>import</scope>
+            <type>pom</type>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
+
+   <dependencies>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-glfw</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-stb</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-glfw</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-stb</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+   </dependencies>
+```
+
+{% content "third" %}
+```xml
+    <properties>
+      <lwjgl.version>3.2.3</lwjgl.version>
+      <lwjgl.natives>natives-macos</lwjgl.natives>
+   </properties>
+
+   <dependencyManagement>
+      <dependencies>
+         <dependency>
+            <groupId>org.lwjgl</groupId>
+            <artifactId>lwjgl-bom</artifactId>
+            <version>${lwjgl.version}</version>
+            <scope>import</scope>
+            <type>pom</type>
+         </dependency>
+      </dependencies>
+   </dependencyManagement>
+
+   <dependencies>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-glfw</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-stb</artifactId>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-glfw</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+      <dependency>
+         <groupId>org.lwjgl</groupId>
+         <artifactId>lwjgl-stb</artifactId>
+         <classifier>${lwjgl.natives}</classifier>
+      </dependency>
+   </dependencies>
+```
+
+{% endtabs %}
+
+If you require a more complex dependency setup, for example supporting multiple operating systems, head to [lwjgl.org](https://lwjgl.org/customize) and easily build a `pom.xml` specific to your needs.
+
+### Gradle
+
+This assumes, you have already created a Gradle project and have some familiarity with Gradle's `build.gralde` file.
+
+Depending on your operating system, add the following to your `build.gradle`:
+
+{% tabs first="Windows", second="Linux", third="macOS" %}
+{% content "first" %}
+```groovy
+    project.ext.lwjglVersion = "3.2.3"
+    project.ext.lwjglNatives = "natives-windows-x86"
+    
+    repositories {
+       mavenCentral()
+    }
+    
+    dependencies {
+       implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+    
+       implementation "org.lwjgl:lwjgl"
+       implementation "org.lwjgl:lwjgl-glfw"
+       implementation "org.lwjgl:lwjgl-stb"
+       runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
+       runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
+       runtimeOnly "org.lwjgl:lwjgl-stb::$lwjglNatives"
+    }
+```
+
+{% content "second" %}
+```groovy
+    project.ext.lwjglVersion = "3.2.3"
+    project.ext.lwjglNatives = "natives-linux"
+    
+    repositories {
+       mavenCentral()
+    }
+    
+    dependencies {
+       implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+    
+       implementation "org.lwjgl:lwjgl"
+       implementation "org.lwjgl:lwjgl-glfw"
+       implementation "org.lwjgl:lwjgl-stb"
+       runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
+       runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
+       runtimeOnly "org.lwjgl:lwjgl-stb::$lwjglNatives"
+    }
+```
+
+{% content "third" %}
+```groovy
+    project.ext.lwjglVersion = "3.2.3"
+    project.ext.lwjglNatives = "natives-macos"
+    
+    repositories {
+       mavenCentral()
+    }
+    
+    dependencies {
+       implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+    
+       implementation "org.lwjgl:lwjgl"
+       implementation "org.lwjgl:lwjgl-glfw"
+       implementation "org.lwjgl:lwjgl-stb"
+       runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
+       runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
+       runtimeOnly "org.lwjgl:lwjgl-stb::$lwjglNatives"
+    }
+```
+
+{% endtabs %}
+
+If you require a more complex dependency setup, for example supporting multiple operating systems, head to [lwjgl.org](https://lwjgl.org/customize) and easily build a `gradle.properties` specific to your needs.
+
+### IntelliJ IDEA / Eclipse
+
+This assumes, you have already created an IntelliJ IDEA or Eclipse project and are somewhat familiar with your IDE of choice.
+
+1. Open [lwjgl.org](https://lwjgl.org/customize) and select `Release`.
+2. Adjust the following settings:  
+   &nbsp;&nbsp;Options: `Include source`, `Include JavaDoc`  
+   &nbsp;&nbsp;Natives: *choose depending on your needs*  
+   &nbsp;&nbsp;Presets: `None` (*to deselect everything*)  
+   &nbsp;&nbsp;Contents: `LWJGL core`, `GLFW`, `stb`
+3. Hit `DOWNLOAD ZIP` and extract the downloaded archive into a folder in your project root (e.g. `lib`).
+
+{% tabs first="IntelliJ IDEA, second="Eclipse" %}
+{% content "first" %}
+{:start="4}
+4. Open `Project Structure` by pressing ![alt text](https://i.imgur.com/RgPu05S.png "Project Structure") in the top right corner, or `CTRL+ALT+SHIFT+S` / `⌘Cmd+;`.
+5. Select the tab `Libraries` on the left, click on ![alt text](https://i.imgur.com/hgPOXYM.png "Add Library") and select `Java`:
+![alt text](https://i.imgur.com/TzC1JTy.png "Project Structure > Libraries")
+6. Specify your libraries location (selecting the top-level folder is enough), and select the modules to add your libraries to:
+![alt text](https://i.imgur.com/5La4UJp.png "Select Library Files")![alt text](https://i.imgur.com/mPRwPpm.png "Choose Modules")
+   Note: *When selecting a folder as library file, IntelliJ classifies jars containing JavaDoc and natives under `Classes`. This is purely visual - JavaDocs and natives are correctly added.*
+7. Save your Project Settings by clicking on `Okay.`
+
+{% content "second" %}
+{:start="4"}
+TODO
+
+{% endtabs %}
