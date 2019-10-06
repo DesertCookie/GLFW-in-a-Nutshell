@@ -11,12 +11,14 @@ Before tab
 Text in first tab
 
 > Funny
+
 {% endtab %}
 
 {% tab title="Second Tab Name" %}
 Text in second tab
 
 > Not so funny
+
 {% endtab %}
 {% endtabs %}
 

@@ -277,9 +277,8 @@ This assumes, you have already created an IntelliJ IDEA or Eclipse project and a
 {% tabs %}
 {% tab title="IntelliJ IDEA" %}
 
-{:start="4}
 4. Open `Project Structure` by pressing ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/.gitbook/assets/intellij_idea_icon_project_structure.png "Project Structure") in the top right corner, or `CTRL+ALT+SHIFT+S` / `⌘Cmd+;`.
-5. Select the tab `Libraries` on the left, click on ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/.gitbook/assets/intellij_idea_icon_add_library.png "Add Library") and select `Java`:
+5. Select the tab `Libraries` on the left, click on ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/.gitbook/assets/intellij_idea_icon_add_library.png "Add Library") and select `Java`:  
 ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/.gitbook/assets/intellij_idea_project_structure.png "Project Structure > Libraries")
 6. Specify your libraries location (selecting the top-level folder is enough), and select the modules to add your libraries to:  
 ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/.gitbook/assets/intellij_idea_select_library_files.png "Select Library Files") ![alt text](https://raw.githubusercontent.com/DesertCookie/GLFW-in-a-Nutshell/master/gitbook/.gitbook/assets/intellij_idea_chose_modules.png "Choose Modules")  
