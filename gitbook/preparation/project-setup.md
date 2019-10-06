@@ -211,8 +211,8 @@ Depending on your operating system, add the following to your `build.gradle`:
     }
 ```
 
-{% tab title="Linux" %}
 {% endtab %}
+{% tab title="Linux" %}
 
 ```groovy
     project.ext.lwjglVersion = "3.2.3"
@@ -234,8 +234,8 @@ Depending on your operating system, add the following to your `build.gradle`:
     }
 ```
 
-{% tab title="macOS" %}
 {% endtab %}
+{% tab title="macOS" %}
 
 ```groovy
     project.ext.lwjglVersion = "3.2.3"
