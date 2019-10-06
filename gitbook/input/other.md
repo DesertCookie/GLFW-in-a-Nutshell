@@ -1,5 +1,5 @@
 ---
-description: Other input methods: clipboard, path-dropping, time
+description: Other input methods like clipboard, path-dropping, time
 ---
 
 # Other
